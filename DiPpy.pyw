@@ -119,7 +119,6 @@ def validateDC():
 
 # Creates the dip calculation function
 def dipCalc():
-
     if validateDC() == True:
         deltaVS = float(vs2.get())-float(vs1.get())
         deltaTVD = float(tvd2.get())-float(tvd1.get())
@@ -226,7 +225,6 @@ def validateZVS():
 
 # Creates the Calculate 0' VS TVD function
 def zeroVStvd():
-
     if validateZVS() == True:
         absDip = 90-(float(dipCurrent.get()))
         zVStvd = None
