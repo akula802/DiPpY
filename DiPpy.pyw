@@ -231,12 +231,12 @@ def zeroVStvd():
     else:
         return
 
-    if dipCurrent == 90:
+    if absDip == 90:
         zeroVS.set("TVD = " + round(tvdCurrent, 0) + " @ 0\' VS")
-    elif dipCurrent > 90:
+    elif absDip > 90:
         zVStvd = round((int(tvdCurrent.get()) + (math.tan(math.radians(absDip)) * int(vsCurrent.get()))), 2)
         zeroVS.set("TVD = " + str(round(zVStvd, 1)) + " @ 0\' VS")
-    elif dipCurrent < 90:
+    elif absDip < 90:
         zVStvd = round((int(tvdCurrent.get()) - (math.tan(math.radians(absDip)) * int(vsCurrent.get()))), 2)
         zeroVS.set("TVD = " + str(round(zVStvd, 1)) + " @ 0\' VS")
     else:
